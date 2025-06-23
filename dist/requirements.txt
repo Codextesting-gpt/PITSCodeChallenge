@@ -1,0 +1,33 @@
+# Web Framework
+fastapi
+uvicorn[standard]
+
+# File Upload & Processing
+python-multipart
+
+# OCR Dependencies
+pdf2image
+Pillow
+opencv-python
+easyocr
+
+# ML & Embeddings
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+
+# LLM Integration
+langchain
+langchain-google-genai
+google-generativeai
+
+# Data Validation
+pydantic
+time
+
+# Environment Management
+python-dotenv
+
+# Optional for production
+gunicorn
