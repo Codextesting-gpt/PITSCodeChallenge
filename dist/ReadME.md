@@ -209,4 +209,6 @@ logging.basicConfig(level=logging.DEBUG)
 - Batch multiple documents in single API calls
 - Adjust RAG to ensure better exactitude or speed
 - Consider caching embeddings for repeated document types
+
+## For a more detailed explanation of how the code works you are more than welcome to delve into the code comments, the image for the flow process or the explanation of complex functions in the multi_tool_ai.MD
 ---
