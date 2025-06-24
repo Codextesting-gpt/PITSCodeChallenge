@@ -2,7 +2,7 @@
 
 A secure, AI-powered document processing API that extracts structured data from images and PDFs using OCR, semantic search, and Large Language Models.
 
-## 🎯 Project Overview
+## 🎯 Project Overview 
 
 This API provides a complete document processing pipeline that can:
 
