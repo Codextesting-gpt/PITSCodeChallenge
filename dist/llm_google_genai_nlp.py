@@ -16,8 +16,11 @@ def build_prompt(matches: List[Dict[str, Any]], time) -> str:
 You are an expert categorizer. Extract the minimal value for each variable from its context.
 
 Guidelines
-• Use the match plus the previous and next segments to find the value.
-• Return only the value—no labels, units, or extra words.
+• Use the match query plus the previous and next segments to find the value.
+• If the text doesnt make sense you must transform it to make sense, it utilizes OCR so clean the text if it is not comprehensible
+• Return only the value—no labels, units, or extra words. (If the words dont make sense make it make sense, additionally make sure the text has correct grammar)
+• Text cannot be only in caps should be correctly placed and should have correct english syntax transform WeIRDTEXT into Weird Text
+Additionally make sure you summarize into its minimal format for instance if it says The values given are cats and some dogs you should answer it as --> Cats and dogs.
 • Leave any missing value blank.
 • After all variables, also return:
     • time        – a concise date/time of how long did the system balanced the document. The total time the system balanced the document is {time} seconds
