@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="378pt" height="1074pt" viewBox="0.00 0.00 378.00 1073.60">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1069.6)">
+<title>ProgramFlow</title>
+<polygon fill="#f8f9fa" stroke="none" points="-4,4 -4,-1069.6 374,-1069.6 374,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_main</title>
+<polygon fill="#e3f2fd" stroke="#1976d2" points="44,-911.2 44,-1057.6 362,-1057.6 362,-911.2 44,-911.2"/>
+<text text-anchor="middle" x="203" y="-1042.8" font-family="Arial Bold" font-size="12.00" fill="#1976d2">main.py</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ocr</title>
+<polygon fill="#e8f5e8" stroke="#388e3c" points="37,-612.8 37,-903.2 185,-903.2 185,-612.8 37,-612.8"/>
+<text text-anchor="middle" x="111" y="-888.4" font-family="Arial Bold" font-size="12.00" fill="#388e3c">ocr.py</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_embedding</title>
+<polygon fill="#fff3e0" stroke="#f57c00" points="31,-306.4 31,-604.8 309,-604.8 309,-306.4 31,-306.4"/>
+<text text-anchor="middle" x="170" y="-590" font-family="Arial Bold" font-size="12.00" fill="#f57c00">embedding.py</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_llm</title>
+<polygon fill="#f3e5f5" stroke="#7b1fa2" points="8,-8 8,-298.4 310,-298.4 310,-8 8,-8"/>
+<text text-anchor="middle" x="159" y="-283.6" font-family="Arial Bold" font-size="12.00" fill="#7b1fa2">llm_google_genai_nlp.py</text>
+</g>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<polygon fill="#bbdefb" stroke="black" points="170.26,-1027.2 51.74,-1027.2 51.74,-991.2 170.26,-991.2 170.26,-1027.2"/>
+<text text-anchor="middle" x="111" y="-1012.2" font-family="Arial" font-size="10.00">POST /extract_entities</text>
+<text text-anchor="middle" x="111" y="-1000.2" font-family="Arial" font-size="10.00">start_time = time.time()</text>
+</g>
+<!-- save_files -->
+<g id="node2" class="node">
+<title>save_files</title>
+<polygon fill="#bbdefb" stroke="black" points="162.64,-955.2 59.36,-955.2 59.36,-919.2 162.64,-919.2 162.64,-955.2"/>
+<text text-anchor="middle" x="111" y="-934.2" font-family="Arial" font-size="10.00">Save uploaded files</text>
+</g>
+<!-- start&#45;&gt;save_files -->
+<g id="edge1" class="edge">
+<title>start-&gt;save_files</title>
+<path fill="none" stroke="black" d="M111,-990.9C111,-983.61 111,-974.93 111,-966.74"/>
+<polygon fill="black" stroke="black" points="114.5,-966.82 111,-956.82 107.5,-966.82 114.5,-966.82"/>
+</g>
+<!-- ocr_file -->
+<g id="node5" class="node">
+<title>ocr_file</title>
+<polygon fill="#c8e6c9" stroke="black" points="138.45,-872.8 83.55,-872.8 83.55,-836.8 138.45,-836.8 138.45,-872.8"/>
+<text text-anchor="middle" x="111" y="-851.8" font-family="Arial" font-size="10.00">ocr_file()</text>
+</g>
+<!-- save_files&#45;&gt;ocr_file -->
+<g id="edge2" class="edge">
+<title>save_files-&gt;ocr_file</title>
+<path fill="none" stroke="black" d="M111,-918.75C111,-908.75 111,-895.93 111,-884.48"/>
+<polygon fill="black" stroke="black" points="114.5,-884.73 111,-874.73 107.5,-884.73 114.5,-884.73"/>
+</g>
+<!-- calc_time -->
+<g id="node3" class="node">
+<title>calc_time</title>
+<polygon fill="#bbdefb" stroke="black" points="353.76,-1027.2 188.24,-1027.2 188.24,-991.2 353.76,-991.2 353.76,-1027.2"/>
+<text text-anchor="middle" x="271" y="-1012.2" font-family="Arial" font-size="10.00">Calculate actual_processing_time</text>
+<text text-anchor="middle" x="271" y="-1000.2" font-family="Arial" font-size="10.00">Override processing_time</text>
+</g>
+<!-- return_result -->
+<g id="node4" class="node">
+<title>return_result</title>
+<polygon fill="#bbdefb" stroke="black" points="302.35,-955.2 199.65,-955.2 199.65,-919.2 302.35,-919.2 302.35,-955.2"/>
+<text text-anchor="middle" x="251" y="-934.2" font-family="Arial" font-size="10.00">Return JSON result</text>
+</g>
+<!-- calc_time&#45;&gt;return_result -->
+<g id="edge18" class="edge">
+<title>calc_time-&gt;return_result</title>
+<path fill="none" stroke="black" d="M266.06,-990.9C263.92,-983.44 261.38,-974.52 258.99,-966.17"/>
+<polygon fill="black" stroke="black" points="262.42,-965.41 256.3,-956.76 255.68,-967.34 262.42,-965.41"/>
+</g>
+<!-- save_and_ocr -->
+<g id="node6" class="node">
+<title>save_and_ocr</title>
+<polygon fill="#c8e6c9" stroke="black" points="153.74,-800.8 68.26,-800.8 68.26,-764.8 153.74,-764.8 153.74,-800.8"/>
+<text text-anchor="middle" x="111" y="-779.8" font-family="Arial" font-size="10.00">save_and_ocr()</text>
+</g>
+<!-- ocr_file&#45;&gt;save_and_ocr -->
+<g id="edge3" class="edge">
+<title>ocr_file-&gt;save_and_ocr</title>
+<path fill="none" stroke="black" d="M111,-836.5C111,-829.21 111,-820.53 111,-812.34"/>
+<polygon fill="black" stroke="black" points="114.5,-812.42 111,-802.42 107.5,-812.42 114.5,-812.42"/>
+</g>
+<!-- ocr_protected -->
+<g id="node7" class="node">
+<title>ocr_protected</title>
+<polygon fill="#c8e6c9" stroke="black" points="176.52,-728.8 45.48,-728.8 45.48,-692.8 176.52,-692.8 176.52,-728.8"/>
+<text text-anchor="middle" x="111" y="-707.8" font-family="Arial" font-size="10.00">MultitoolAI()._ocr_image()</text>
+</g>
+<!-- save_and_ocr&#45;&gt;ocr_protected -->
+<g id="edge4" class="edge">
+<title>save_and_ocr-&gt;ocr_protected</title>
+<path fill="none" stroke="black" d="M111,-764.5C111,-757.21 111,-748.53 111,-740.34"/>
+<polygon fill="black" stroke="black" points="114.5,-740.42 111,-730.42 107.5,-740.42 114.5,-740.42"/>
+</g>
+<!-- clean_result -->
+<g id="node8" class="node">
+<title>clean_result</title>
+<polygon fill="#c8e6c9" stroke="black" points="159.02,-656.8 62.98,-656.8 62.98,-620.8 159.02,-620.8 159.02,-656.8"/>
+<text text-anchor="middle" x="111" y="-635.8" font-family="Arial" font-size="10.00">clean_ocr_result()</text>
+</g>
+<!-- ocr_protected&#45;&gt;clean_result -->
+<g id="edge5" class="edge">
+<title>ocr_protected-&gt;clean_result</title>
+<path fill="none" stroke="black" d="M111,-692.5C111,-685.21 111,-676.53 111,-668.34"/>
+<polygon fill="black" stroke="black" points="114.5,-668.42 111,-658.42 107.5,-668.42 114.5,-668.42"/>
+</g>
+<!-- embeddings_func -->
+<g id="node9" class="node">
+<title>embeddings_func</title>
+<polygon fill="#ffcc80" stroke="black" points="150.13,-574.4 71.87,-574.4 71.87,-538.4 150.13,-538.4 150.13,-574.4"/>
+<text text-anchor="middle" x="111" y="-553.4" font-family="Arial" font-size="10.00">Embeddings()</text>
+</g>
+<!-- clean_result&#45;&gt;embeddings_func -->
+<g id="edge6" class="edge">
+<title>clean_result-&gt;embeddings_func</title>
+<path fill="none" stroke="black" d="M111,-620.35C111,-610.35 111,-597.53 111,-586.08"/>
+<polygon fill="black" stroke="black" points="114.5,-586.33 111,-576.33 107.5,-586.33 114.5,-586.33"/>
+</g>
+<!-- page_segments -->
+<g id="node10" class="node">
+<title>page_segments</title>
+<polygon fill="#ffcc80" stroke="black" points="146.86,-502.4 39.14,-502.4 39.14,-466.4 146.86,-466.4 146.86,-502.4"/>
+<text text-anchor="middle" x="93" y="-481.4" font-family="Arial" font-size="10.00">page_to_segments()</text>
+</g>
+<!-- embeddings_func&#45;&gt;page_segments -->
+<g id="edge7" class="edge">
+<title>embeddings_func-&gt;page_segments</title>
+<path fill="none" stroke="black" d="M106.55,-538.1C104.65,-530.72 102.39,-521.92 100.26,-513.65"/>
+<polygon fill="black" stroke="black" points="103.66,-512.78 97.78,-503.97 96.88,-514.53 103.66,-512.78"/>
+</g>
+<!-- flatten_ocr -->
+<g id="node11" class="node">
+<title>flatten_ocr</title>
+<polygon fill="#ffcc80" stroke="black" points="300.74,-502.4 165.26,-502.4 165.26,-466.4 300.74,-466.4 300.74,-502.4"/>
+<text text-anchor="middle" x="233" y="-481.4" font-family="Arial" font-size="10.00">Flatten OCR → DataFrame</text>
+</g>
+<!-- embeddings_func&#45;&gt;flatten_ocr -->
+<g id="edge8" class="edge">
+<title>embeddings_func-&gt;flatten_ocr</title>
+<path fill="none" stroke="black" d="M141.47,-537.92C157.16,-528.91 176.49,-517.82 193.33,-508.16"/>
+<polygon fill="black" stroke="black" points="194.67,-511.43 201.6,-503.41 191.19,-505.35 194.67,-511.43"/>
+</g>
+<!-- encode_vectors -->
+<g id="node12" class="node">
+<title>encode_vectors</title>
+<polygon fill="#ffcc80" stroke="black" points="266.02,-430.4 159.98,-430.4 159.98,-386.4 266.02,-386.4 266.02,-430.4"/>
+<text text-anchor="middle" x="213" y="-417.4" font-family="Arial" font-size="10.00">encoder.encode()</text>
+<text text-anchor="middle" x="213" y="-405.4" font-family="Arial" font-size="10.00">faiss.normalize_L2()</text>
+<text text-anchor="middle" x="213" y="-393.4" font-family="Arial" font-size="10.00">faiss.IndexFlatL2()</text>
+</g>
+<!-- flatten_ocr&#45;&gt;encode_vectors -->
+<g id="edge9" class="edge">
+<title>flatten_ocr-&gt;encode_vectors</title>
+<path fill="none" stroke="black" d="M228.36,-466.24C226.39,-458.96 224.03,-450.22 221.76,-441.81"/>
+<polygon fill="black" stroke="black" points="225.14,-440.91 219.15,-432.17 218.38,-442.73 225.14,-440.91"/>
+</g>
+<!-- search_protected -->
+<g id="node13" class="node">
+<title>search_protected</title>
+<polygon fill="#ffcc80" stroke="black" points="300.77,-350.4 85.23,-350.4 85.23,-314.4 300.77,-314.4 300.77,-350.4"/>
+<text text-anchor="middle" x="193" y="-329.4" font-family="Arial" font-size="10.00">MultitoolAI()._search_and_extract_matches()</text>
+</g>
+<!-- encode_vectors&#45;&gt;search_protected -->
+<g id="edge10" class="edge">
+<title>encode_vectors-&gt;search_protected</title>
+<path fill="none" stroke="black" d="M207.22,-386C205.15,-378.34 202.78,-369.59 200.58,-361.45"/>
+<polygon fill="black" stroke="black" points="204.01,-360.74 198.03,-352 197.26,-362.56 204.01,-360.74"/>
+</g>
+<!-- extract_values -->
+<g id="node14" class="node">
+<title>extract_values</title>
+<polygon fill="#ce93d8" stroke="black" points="236.57,-268 149.43,-268 149.43,-232 236.57,-232 236.57,-268"/>
+<text text-anchor="middle" x="193" y="-247" font-family="Arial" font-size="10.00">extract_values()</text>
+</g>
+<!-- search_protected&#45;&gt;extract_values -->
+<g id="edge11" class="edge">
+<title>search_protected-&gt;extract_values</title>
+<path fill="none" stroke="black" d="M193,-313.95C193,-303.95 193,-291.13 193,-279.68"/>
+<polygon fill="black" stroke="black" points="196.5,-279.93 193,-269.93 189.5,-279.93 196.5,-279.93"/>
+</g>
+<!-- build_prompt -->
+<g id="node15" class="node">
+<title>build_prompt</title>
+<polygon fill="#ce93d8" stroke="black" points="96.24,-196 15.76,-196 15.76,-160 96.24,-160 96.24,-196"/>
+<text text-anchor="middle" x="56" y="-175" font-family="Arial" font-size="10.00">build_prompt()</text>
+</g>
+<!-- extract_values&#45;&gt;build_prompt -->
+<g id="edge12" class="edge">
+<title>extract_values-&gt;build_prompt</title>
+<path fill="none" stroke="black" d="M158.78,-231.52C140.99,-222.43 119.05,-211.22 100.01,-201.49"/>
+<polygon fill="black" stroke="black" points="101.63,-198.38 91.13,-196.95 98.44,-204.62 101.63,-198.38"/>
+</g>
+<!-- build_model_protected -->
+<g id="node16" class="node">
+<title>build_model_protected</title>
+<polygon fill="#ce93d8" stroke="black" points="301.59,-196 114.41,-196 114.41,-160 301.59,-160 301.59,-196"/>
+<text text-anchor="middle" x="208" y="-175" font-family="Arial" font-size="10.00">MultitoolAI()._build_extraction_model()</text>
+</g>
+<!-- extract_values&#45;&gt;build_model_protected -->
+<g id="edge13" class="edge">
+<title>extract_values-&gt;build_model_protected</title>
+<path fill="none" stroke="black" d="M196.71,-231.7C198.29,-224.32 200.17,-215.52 201.95,-207.25"/>
+<polygon fill="black" stroke="black" points="205.34,-208.1 204.02,-197.58 198.5,-206.63 205.34,-208.1"/>
+</g>
+<!-- llm_invoke -->
+<g id="node17" class="node">
+<title>llm_invoke</title>
+<polygon fill="#ce93d8" stroke="black" points="266.87,-124 139.13,-124 139.13,-88 266.87,-88 266.87,-124"/>
+<text text-anchor="middle" x="203" y="-109" font-family="Arial" font-size="10.00">ChatGoogleGenerativeAI</text>
+<text text-anchor="middle" x="203" y="-97" font-family="Arial" font-size="10.00">.with_structured_output()</text>
+</g>
+<!-- build_prompt&#45;&gt;llm_invoke -->
+<g id="edge15" class="edge">
+<title>build_prompt-&gt;llm_invoke</title>
+<path fill="none" stroke="black" d="M92.72,-159.52C111.91,-150.38 135.6,-139.09 156.11,-129.33"/>
+<polygon fill="black" stroke="black" points="157.61,-132.49 165.13,-125.03 154.6,-126.17 157.61,-132.49"/>
+</g>
+<!-- build_model_protected&#45;&gt;llm_invoke -->
+<g id="edge14" class="edge">
+<title>build_model_protected-&gt;llm_invoke</title>
+<path fill="none" stroke="black" d="M206.76,-159.7C206.24,-152.41 205.62,-143.73 205.04,-135.54"/>
+<polygon fill="black" stroke="black" points="208.53,-135.34 204.33,-125.61 201.55,-135.84 208.53,-135.34"/>
+</g>
+<!-- process_result_protected -->
+<g id="node18" class="node">
+<title>process_result_protected</title>
+<polygon fill="#ce93d8" stroke="black" points="302.15,-52 103.85,-52 103.85,-16 302.15,-16 302.15,-52"/>
+<text text-anchor="middle" x="203" y="-31" font-family="Arial" font-size="10.00">MultitoolAI()._process_extraction_result()</text>
+</g>
+<!-- llm_invoke&#45;&gt;process_result_protected -->
+<g id="edge16" class="edge">
+<title>llm_invoke-&gt;process_result_protected</title>
+<path fill="none" stroke="black" d="M203,-87.7C203,-80.41 203,-71.73 203,-63.54"/>
+<polygon fill="black" stroke="black" points="206.5,-63.62 203,-53.62 199.5,-63.62 206.5,-63.62"/>
+</g>
+<!-- process_result_protected&#45;&gt;calc_time -->
+<g id="edge17" class="edge">
+<title>process_result_protected-&gt;calc_time</title>
+<path fill="none" stroke="black" d="M235.05,-52.46C272.67,-75.57 330,-120.11 330,-177 330,-855.8 330,-855.8 330,-855.8 330,-900.78 329.25,-914.09 311,-955.2 306.83,-964.59 300.72,-973.87 294.52,-981.97"/>
+<polygon fill="black" stroke="black" points="291.83,-979.73 288.26,-989.7 297.27,-984.13 291.83,-979.73"/>
+</g>
+</g>
+</svg>
